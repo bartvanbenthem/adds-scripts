@@ -7,7 +7,7 @@
 #---------------------------------------------------------- 
 #CREATE FUNCTION
 #---------------------------------------------------------- 
-function NewADServiceAccount {
+function NewADUserAccount {
     [CmdletBinding()]
     Param (
           
@@ -83,5 +83,5 @@ function NewADServiceAccount {
 }
 
 [psobject]$admin = Get-Credential "<service account>"
-Import-Csv .\csv\prodUsrAccounts.csv | NewADServiceAccount -dc "<domain controller>" -credential $admin
+Import-Csv .\csv\prodUsrAccounts.csv | NewADUserAccount -dc "<domain controller>" -credential $admin
 
