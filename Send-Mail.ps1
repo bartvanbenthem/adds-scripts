@@ -12,11 +12,11 @@ $Attachment = Get-ChildItem ".\attachment\*"
 #Sending e-mail
 Write-Host "Sending email" -Verbose
 Try { 
-      $mail = Send-MailMessage -From "name@ns.nl" `
-                       -To "name@kpn.com" `
+      $mail = Send-MailMessage -From "name@domain.nl" `
+                       -To "name@domain.com" `
                        -Subject "subject" `
                        -Body "body text" `
-                       -SmtpServer "mailrelay.ns.nl" `
+                       -SmtpServer "mailrelay.domain.com" `
                        -Attachments $Attachment `
                        -ErrorAction Stop
 }
